@@ -3,7 +3,7 @@
 
 [rocketmq_completion](https://github.com/jerrysearch/rocketmq_completion)是为[rocketmq](https://github.com/alibaba/RocketMQ)开发的命令行补全工具，主要方便用户使用rocketmq时，减少命令行交互的成本及出错的概率!
 
-## 用法
+## 安装
 
 rocketmq_completion只有一个脚本，借助Linux中complete及compgen技术实现
 
@@ -26,6 +26,12 @@ rocketmq_completion只有一个脚本，借助Linux中complete及compgen技术�
 * 输出中出现以下内容表示成功
 
 		complete -F _mqadmin mqadmin
+		
+## 用法
+	./mqadmin[tab]
+	./mqadmin clusterList [-tab][--tab]
+
+参数部分 -表示必选参数，--表示可选参数
 		
 		
 		
