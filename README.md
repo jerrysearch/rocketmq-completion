@@ -1,7 +1,7 @@
 # rocketmq_completion
 ## 介绍
 
-[rocketmq_completion](https://github.com/jerrysearch/rocketmq_completion)是为[rocketmq](https://github.com/alibaba/RocketMQ)开发的命令行补全工具，主要方便用户使用rocketmq时，减少命令行交互的成本及出错的概率!
+[rocketmq_completion](https://github.com/jerrysearch/rocketmq_completion)是为[rocketmq](https://github.com/alibaba/RocketMQ)开发的命令行自动补全工具，主要方便用户使用rocketmq时，减少命令行交互的成本及出错的概率!
 
 ## 安装
 
@@ -35,9 +35,9 @@ rocketmq_completion只有一个脚本，借助Linux中complete及compgen技术�
 		
 		
 		
-## 其它
+## 关于升级
 * 目前版本只实现了mqadmin脚本的自动补全
-* 未来对其它脚本的补全会持续更新，实现方式是在rocketmq_completion脚本下添加\_command方法并complete -F  \_command command方式来实现，以上用法中的步骤用户无需重复操作，即可实现对新增命令的自动补全
+* 未来对其它脚本的补全会持续更新，实现方式是在rocketmq_completion脚本下添加\_command方法并complete -F  \_command command方式来实现，以上用法中的步骤用户无需重复操作，即可实现对新增命令的支持
 
 ## 关于作者
 坚持走技术路线的码农一枚
