@@ -16,7 +16,7 @@ rocketmq_completion只有一个脚本，借助Linux中complete及compgen技术�
 
 * 在bash_profile下填加一行
 	
-		source /your_path/rocketmq_completion/rocketmq_completion
+		source /etc/bash_completion.d/rocketmq_completion
 
 * 重新打开一个新窗口，检查completion是否起作用
 
