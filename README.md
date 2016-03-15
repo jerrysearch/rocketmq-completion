@@ -1,18 +1,18 @@
-# rocketmq_completion
+# rocketmq-completion
 ## 介绍
 
-[rocketmq_completion](https://github.com/jerrysearch/rocketmq_completion)是为[rocketmq](https://github.com/alibaba/RocketMQ)开发的命令行自动补全工具，主要方便用户使用rocketmq时，减少命令行交互的成本及出错的概率!
+[rocketmq-completion](https://github.com/jerrysearch/rocketmq-completion)是为[rocketmq](https://github.com/alibaba/RocketMQ)开发的命令行自动补全工具，主要方便用户使用rocketmq时，减少命令行交互的成本及出错的概率!
 
 ## 安装
 
-rocketmq_completion只有一个脚本，借助Linux中complete及compgen技术实现
+rocketmq-completion只有一个脚本，借助Linux中complete及compgen技术实现
 
-* 从github上download到本地或服务器任何目录下，例如：/your_path/rocketmq_completion/rocketmq_completion
+* 从github上download到本地或服务器任何目录下，例如：/your_path/rocketmq-completion/rocketmq_completion
 * 在本机bash_completion.d目录下，建立对应软连接(需要root权限)，注：不同Linux发行版目录地址不同，用户可根据自己系统版本 google
 
 
 		cd /etc/bash_completion.d/
-		ln -s /your_path/rocketmq_completion/rocketmq_completion
+		ln -s /your_path/rocketmq-completion/rocketmq_completion
 
 * 在bash_profile下填加一行
 	
