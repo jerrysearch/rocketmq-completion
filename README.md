@@ -40,4 +40,4 @@ rocketmq-completion只有一个脚本，借助Linux中complete及compgen技术�
 * 未来对其它脚本的补全会持续更新，实现方式是在rocketmq_completion脚本下添加\_command方法并complete -F  \_command command方式来实现，以上用法中的步骤用户无需重复操作，即可实现对新增命令的支持
 
 ## 关于作者
-坚持走技术路线的码农一枚
+自封首席程序员，哈哈
