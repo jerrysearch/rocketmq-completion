@@ -68,4 +68,8 @@ complete -F _mqadmin mqadmin
 
 Just a coder
 
+## License
+
+[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) Copyright (C) 2015-2017 Jerry
+
 
