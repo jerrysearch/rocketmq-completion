@@ -1,67 +1,71 @@
-# rocketmq-completion
+# Rocketmq Completion
 
 [![GitHub release](https://img.shields.io/badge/release-download-orange.svg)](https://github.com/jerrysearch/rocketmq-completion/releases)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-rocketmq-completion是为[rocketmq](https://github.com/alibaba/RocketMQ)开发的命令行自动补全工具，借助Linux的[complete](http://info2html.sourceforge.net/cgi-bin/info2html-demo/info2html?%28bash.info.gz%29Programmable%2520Completion)技术实现，方便用户使用rocketmq时，减少命令行交互的成本及出错的概率。
+**[RocketMq Completion]() is a tool, support bash tab completion for [Apache RocketMq](https://github.com/apache/incubator-rocketmq) bash command**
 
-## 安装
-#### [推荐]标准安装方式
+Use [complete](http://info2html.sourceforge.net/cgi-bin/info2html-demo/info2html?%28bash.info.gz%29Programmable%2520Completion) technology to reduce the cost of command-line interaction and the probability of error
 
-* 确保本用户Home目录下存在`.bash_completion`文件和`.bash_completion.d`目录
-* 在`.bash_completion`文件中增加如下内容
+## install
+#### [Recommend] Standard installation method
+
+* Make sure that the `.bash_completion` file and` .bash_completion.d` directory exist in this user's home directory
+* Add the following to the .bash_completion file
 
 ```bash
 for bcfile in ~/.bash_completion.d/* ; do
   . $bcfile
 done
 ```
-* 从[releases](https://github.com/jerrysearch/rocketmq-completion/releases)下载`mqadmin_completion`文件到`.bash_completion.d`
-* 重新登陆当前用户或执行`source mqadmin_completion`
-* 检查脚本是否生效
+
+* Download `mqadmin_completion` file from the [releases](https://github.com/jerrysearch/rocketmq-completion/releases) to `.bash_completion.d`
+* Log in to the current user or execute `source mqadmin_completion`
+* Check that the script is valid
 
 ```bash
 complete -p | grep -e mqadmin
 ```
-输出中出现如下内容表示成功
+The following appears in the output as successful
 
 ```bash
 complete -F _mqadmin mqadmin
 ```
-#### 通用安装方式
+#### Universal installation method
 
-* 从[releases](https://github.com/jerrysearch/rocketmq-completion/releases)下载`mqadmin_completion`文件到本地
-* 在`~/.bash_profile`中增加如下命令
+* Download `mqadmin_completion` file from the [releases](https://github.com/jerrysearch/rocketmq-completion/releases) to local directory
+* Add the following command to `~/.bash_profile`
 
 ```bash
 source /path/mqadmin_completion
 ```
-* 重新登陆当前用户或执行`source ~/.bash_profile`
-* 检查脚本是否生效
+* Log in to the current user or execute `source ~/.bash_profile`
+* Check that the script is valid
 
 ```bash
 complete -p | grep -e mqadmin
 ```
-输出中出现如下内容表示成功
+The following appears in the output as successful
 
 ```bash
 complete -F _mqadmin mqadmin
 ```
-## 用法
+## Usage
 
 ```bash
 ./mqadmin [tab]
 ./mqadmin [-tab][--tab]
 ```
 
-**-表示必选参数，--表示可选参数**
+**- Indicates a required parameter
+-- Indicates optional parameters**
 				
-## 关于升级
-* 目前只实现了mqadmin脚本的自动补全，若增加对新命令的支持，使用方式同上
-* 对单个脚本的更新，下载新版脚本并覆盖老版本即可
+## About upgrading
+* Currently only suport mqadmin script , if the increase in the new command support, use the same way
+* For individual script updates, download the new script and overwrite the old version
 
-## 关于作者
+## About the author
 
-爱Coding的程序员一枚
+Just a coder
 
 
