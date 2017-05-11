@@ -16,125 +16,97 @@ _mqadmin(){
 
         updateTopic)
         COMPREPLY=( $(compgen -W "-t --brokerAddr --clusterName --namesrvAddr --order --perm --readQueueNums --hasUnitSub --unit --writeQueueNums" --  ${curl}) )
-	return 0
 	;;
         deleteTopic)
 	COMPREPLY=( $(compgen -W "-t -c --namesrvAddr" -- ${curl}) )
-       	return 0
 	;;
         updateSubGroup)
 	COMPREPLY=( $(compgen -W "-g --brokerAddr --clusterName --consumeBroadcastEnable --brokerId --consumeFromMinEnable --namesrvAddr --retryQueueNums --retryMaxTimes --consumeEnable --whichBrokerWhenConsumeSlowly" -- ${curl}) )
-        return 0
 	;;
         deleteSubGroup)
 	COMPREPLY=( $(compgen -W "-g --brokerAddr --clusterName --namesrvAddr"  -- ${curl}) )
-        return 0
 	;;
         updateBrokerConfig)
 	COMPREPLY=( $(compgen -W "-k -v --brokerAddr  --clusterName --namesrvAddr"  -- ${curl}) )
-        return 0
 	;;
         topicRoute)
 	COMPREPLY=( $(compgen -W "-t --namesrvAddr"  -- ${curl}) )
-        return 0
 	;;
         topicStatus)
 	COMPREPLY=( $(compgen -W "-t --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         brokerStatus)
 	COMPREPLY=( $(compgen -W "-b --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         queryMsgById)
 	COMPREPLY=( $(compgen -W "-i --clientId --consumerGroup --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         queryMsgByKey)
 	COMPREPLY=( $(compgen -W "-k -t --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         queryMsgByOffset)
 	COMPREPLY=( $(compgen -W "-b -i -o -t --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         printMsg)
 	COMPREPLY=( $(compgen -W "-t --beginTimestamp --charsetName --endTimestamp --subExpression --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         producerConnection)
 	COMPREPLY=( $(compgen -W "-g -t  --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         consumerConnection)
 	COMPREPLY=( $(compgen -W "-g --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         consumerProgress)
 	COMPREPLY=( $(compgen -W "--groupName --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         consumerStatus)
 	COMPREPLY=( $(compgen -W "-g --clientId --jstack --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         cloneGroupOffset)
 	COMPREPLY=( $(compgen -W "-d -s --offline --srcGroup --topic --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         clusterList)
 	COMPREPLY=( $(compgen -W "--moreStats --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         updateKvConfig)
 	COMPREPLY=( $(compgen -W "-k -s --value --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         deleteKvConfig)
 	COMPREPLY=( $(compgen -W "-k -s --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         wipeWritePerm)
 	COMPREPLY=( $(compgen -W "-b --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         resetOffsetByTime)
 	COMPREPLY=( $(compgen -W "-g -s -t --force --namesrvAddr" -- ${curl}) )
-        return 0
         ;;
         updateOrderConf)
 	COMPREPLY=( $(compgen -W "-m -t --orderConf --namesrvAddr" -- ${curl}) )
-        return 0
         ;;
         cleanExpiredCQ)
 	COMPREPLY=( $(compgen -W "--brokerAddr --cluster --namesrvAddr" -- ${curl}) )
-        return 0
         ;;
         startMonitoring)
 	COMPREPLY=( $(compgen -W "--namesrvAddr" -- ${curl}) )
-        return 0
         ;;
         checkMsg)
 	COMPREPLY=( $(compgen -W "-l -p -s -z --namesrvAddr" -- ${curl}) )
-        return 0
         ;;
         statsAll)
 	COMPREPLY=( $(compgen -W "--activeTopic --namesrvAddr" -- ${curl}) )
-        return 0
         ;;
         syncDocs)
 	OMPREPLY=( $(compgen -W "-u -p --namesrvAddr" -- ${curl}) )
-        return 0
 	;;
         help)
 	COMPREPLY=( $(compgen -W "${opts}" ${curl}) )
-	return 0
         ;;
-
-
+	*)
+	COMPREPLY=( $(compgen -W "${opts}" ${curl}) )
+	;;
 esac
 
-  COMPREPLY=( $(compgen -W "${opts}" ${curl}) )
+return 0
 }
 
 complete -F _mqadmin  mqadmin
