@@ -1,5 +1,8 @@
 # rocketmq-completion
 
+[![GitHub release](https://img.shields.io/badge/release-download-orange.svg)](https://github.com/jerrysearch/rocketmq-completion/releases)
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+
 rocketmq-completion是为[rocketmq](https://github.com/alibaba/RocketMQ)开发的命令行自动补全工具，借助Linux的[complete](http://info2html.sourceforge.net/cgi-bin/info2html-demo/info2html?%28bash.info.gz%29Programmable%2520Completion)技术实现，方便用户使用rocketmq时，减少命令行交互的成本及出错的概率。
 
 ## 安装
