@@ -54,7 +54,7 @@ complete -F _mqadmin mqadmin
 
 ```bash
 ./mqadmin [tab]
-./mqadmin [-tab][--tab]
+./mqadmin command [-tab][--tab]
 ```
 
 **- Indicates a required parameter
