@@ -3,7 +3,7 @@
 [![GitHub release](https://img.shields.io/badge/release-download-orange.svg)](https://github.com/jerrysearch/rocketmq-completion/releases)
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-**[RocketMq Completion]() is a tool, support bash tab completion for [Apache RocketMq](https://github.com/apache/incubator-rocketmq) bash command**
+**[RocketMq Completion](https://github.com/jerrysearch/rocketmq-completion) is a tool, support bash tab completion for [Apache RocketMq](https://github.com/apache/incubator-rocketmq) bash command**
 
 Use [complete](http://info2html.sourceforge.net/cgi-bin/info2html-demo/info2html?%28bash.info.gz%29Programmable%2520Completion) technology to reduce the cost of command-line interaction and the probability of error
 
